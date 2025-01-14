@@ -1,0 +1,66 @@
+﻿@page
+@model SmartWaterApp.Pages.dashboardModel
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Water Usage Tracker</title>
+    <link rel="stylesheet" href="~/css/StyleSheet.css">
+</head>
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+        <div class="container-fluid justify-content-center">
+            <!-- Added justify-content-center -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <!-- Removed ms-auto to center the items -->
+                    <li class="nav-item"><a class="nav-link" href="@Url.Page("/home")">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="@Url.Page("/water_usage_logging")">Water Usage</a></li>
+                    <li class="nav-item"><a class="nav-link" href="@Url.Page("/dashboard")">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="@Url.Page("/goal_settings")">Goals</a></li>
+                    <li class="nav-item"><a class="nav-link" href="@Url.Page("/tips")">Tips</a></li>
+                    <li class="nav-item"><a class="nav-link" href="@Url.Page("/profile_management")">Profile</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <br>
+    <br>
+    <br></br>
+
+    <br></br>
+    <div class="dashboard-container">
+        <h2>Dashboard</h2>
+        <div class="dashboard-summary">
+            <div class="summary-card">
+                <h3>Daily Usage</h3>
+                <p>120L</p>
+            </div>
+            <div class="summary-card">
+                <h3>Weekly Usage</h3>
+                <p>840L</p>
+            </div>
+            <div class="summary-card">
+                <h3>Monthly Usage</h3>
+                <p>3600L</p>
+            </div>
+        </div>
+
+        <div class="goal-progress">
+            <h3>Goal Progress</h3>
+            <div class="progress-bar">
+                <div class="progress" style="width: 60%;"></div>
+            </div>
+            <p>Progress toward goal: 60%</p>
+        </div>
+
+
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</body>

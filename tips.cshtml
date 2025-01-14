@@ -1,0 +1,48 @@
+﻿@page
+@model SmartWaterApp.Pages.tipsModel
+@{
+}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Saving Tips - Water Usage Tracker</title>
+    <link rel="stylesheet" href="~/css/StyleSheet.css">
+</head>
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+        <div class="container-fluid justify-content-center">
+            <!-- Added justify-content-center -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <!-- Removed ms-auto to center the items -->
+                    <li class="nav-item"><a class="nav-link" href="@Url.Page("/home")">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="@Url.Page("/water_usage_logging")">Water Usage</a></li>
+                    <li class="nav-item"><a class="nav-link" href="@Url.Page("/dashboard")">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="@Url.Page("/goal_settings")">Goals</a></li>
+                    <li class="nav-item"><a class="nav-link" href="@Url.Page("/tips")">Tips</a></li>
+                    <li class="nav-item"><a class="nav-link" href="@Url.Page("/profile_management")">Profile</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <br>
+    <br>
+    <br></br>
+    <div class="tips-container">
+        <h2>Water-Saving Tips</h2>
+        <div class="tip">
+            <h3>Use a bucket instead of a hose for car washing</h3>
+            <p>Reduce water wastage while washing your car by using a bucket instead of a hose.</p>
+        </div>
+        <div class="tip">
+            <h3>Install Water-Efficient Fixtures</h3>
+            <p>Save water by installing water-efficient showerheads and faucets.</p>
+        </div>
+        <div class="tip">
+            <h3>Collect Rainwater for Outdoor Use</h3>
+            <p>Use rainwater for watering your garden or outdoor plants.</p>
+        </div>
+    </div>
+
+</body>

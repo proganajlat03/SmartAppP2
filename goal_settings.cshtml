@@ -1,0 +1,55 @@
+﻿@page
+@model SmartWaterApp.Pages.goal_settingsModel
+@{
+}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Goal - Water Usage Tracker</title>
+    <link rel="stylesheet" href="~/css/StyleSheet.css">
+</head>
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+        <div class="container-fluid justify-content-center">
+            <!-- Added justify-content-center -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <!-- Removed ms-auto to center the items -->
+                    <li class="nav-item"><a class="nav-link" href="@Url.Page("/home")">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="@Url.Page("/water_usage_logging")">Water Usage</a></li>
+                    <li class="nav-item"><a class="nav-link" href="@Url.Page("/dashboard")">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="@Url.Page("/goal_settings")">Goals</a></li>
+                    <li class="nav-item"><a class="nav-link" href="@Url.Page("/tips")">Tips</a></li>
+                    <li class="nav-item"><a class="nav-link" href="@Url.Page("/profile_management")">Profile</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <br>
+    <br>
+    <br></br>
+    <div class="goal-setting-container">
+        <h2>Create Water Saving Goal</h2>
+        <form action="dashboard.html" method="POST">
+            <label for="goal-type">Goal Type</label>
+            <select id="goal-type" name="goal_type">
+                <option value="reduce_overall">Reduce Overall Usage</option>
+                <option value="specific_activity">Specific Activity (e.g., Shower)</option>
+            </select>
+
+            <label for="goal-value">Goal Value</label>
+            <input type="number" id="goal-value" name="goal_value" placeholder="Enter goal value in %" required>
+
+            <label for="time-frame">Time Frame</label>
+            <select id="time-frame" name="time_frame">
+                <option value="daily">Daily</option>
+                <option value="weekly">Weekly</option>
+                <option value="monthly">Monthly</option>
+            </select>
+
+            <button type="submit">Create Goal</button>
+        </form>
+    </div>
+
+</body>

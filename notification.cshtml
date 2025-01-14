@@ -1,0 +1,111 @@
+﻿@page
+@model SmartWaterApp.Pages.notificationModel
+@{
+}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+
+        .notification {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            padding: 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        .notification-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+            .notification-header strong {
+                font-size: 1.1em;
+                color: #333;
+            }
+
+        .timestamp {
+            font-size: 0.9em;
+            color: #888;
+        }
+
+        .message {
+            font-size: 1em;
+            color: #555;
+        }
+
+        /* Hover effect for notifications */
+        .notification:hover {
+            background-color: #f1f1f1;
+            border-color: #09ff00;
+        }
+
+        .notification-header {
+            font-weight: bold;
+        }
+
+        .notification-body {
+            font-size: 1em;
+            color: #333;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+        <div class="container-fluid justify-content-center">
+            <!-- Added justify-content-center -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <!-- Removed ms-auto to center the items -->
+                    <li class="nav-item"><a class="nav-link" href="@Url.Page("/home")">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="@Url.Page("/water_usage_logging")">Water Usage</a></li>
+                    <li class="nav-item"><a class="nav-link" href="@Url.Page("/dashboard")">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="@Url.Page("/goal_settings")">Goals</a></li>
+                    <li class="nav-item"><a class="nav-link" href="@Url.Page("/tips")">Tips</a></li>
+                    <li class="nav-item"><a class="nav-link" href="@Url.Page("/profile_management")">Profile</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <br>
+    <br>
+    <br></br>
+    <div class="container">
+        <h1>Notifications</h1>
+
+        <div class="notification">
+            <div class="notification-header d-flex justify-content-between">
+                <strong>Water Usage Reminder</strong>
+                <span class="timestamp">2024-12-05 09:00 AM</span>
+            </div>
+            <p class="notification-body">Don't forget to log your daily water consumption! Check the dashboard for more details.</p>
+        </div>
+
+        <div class="notification">
+            <div class="notification-header d-flex justify-content-between">
+                <strong>Goal Achievement</strong>
+                <span class="timestamp">2024-12-04 03:15 PM</span>
+            </div>
+            <p class="notification-body">Congrats! You've reduced your water usage by 10% this week. Keep it up!</p>
+        </div>
+
+        <div class="notification">
+            <div class="notification-header d-flex justify-content-between">
+                <strong>Tip for Saving Water</strong>
+                <span class="timestamp">2024-12-03 11:30 AM</span>
+            </div>
+            <p class="notification-body">Consider using a bucket to wash your car instead of a hose. It saves a lot of water!</p>
+        </div>
+
+        <!-- Add more notifications as needed -->
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>

@@ -1,0 +1,49 @@
+﻿@page
+@model SmartWaterApp.Pages.profile_managementModel
+@{
+}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Profile - Water Usage Tracker</title>
+    <link rel="stylesheet" href="~/css/StyleSheet.css">
+</head>
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+        <div class="container-fluid justify-content-center">
+            <!-- Added justify-content-center -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <!-- Removed ms-auto to center the items -->
+                    <li class="nav-item"><a class="nav-link" href="@Url.Page("/home")">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="@Url.Page("/water_usage_logging")">Water Usage</a></li>
+                    <li class="nav-item"><a class="nav-link" href="@Url.Page("/dashboard")">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="@Url.Page("/goal_settings")">Goals</a></li>
+                    <li class="nav-item"><a class="nav-link" href="@Url.Page("/tips")">Tips</a></li>
+                    <li class="nav-item"><a class="nav-link" href="@Url.Page("/profile_management")">Profile</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <br>
+    <br>
+    <br></br>
+    <div class="profile-container">
+        <h2>Your Profile</h2>
+        <form action="#" method="POST">
+            <div class="profile-field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" value="example@example.com" required>
+            </div>
+            <div class="profile-field">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <button type="submit">Save Changes</button>
+        </form>
+
+    </div>
+
+</body>

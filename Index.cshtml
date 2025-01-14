@@ -1,0 +1,27 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Login - Water Usage Tracker";
+}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Water Usage Tracker</title>
+    <link rel="stylesheet" href="~/css/StyleSheet.css">
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <form method="POST">
+            <input type="email" id="email" name="Email" placeholder="Enter your email" required>
+            <input type="password" id="password" name="Password" placeholder="Enter your password" required>
+            <button type="submit">Login</button>
+        </form>
+        <p>New user? <a href="@Url.Page("/register")">Create an Account</a></p>
+    </div>
+
+</body>
+</html>
+---
